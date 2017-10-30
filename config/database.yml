@@ -82,6 +82,7 @@ test:
 #
 production:
   <<: *default
-  database: cc_production
-  username: cc
+  host: <%= ENV['CC_DATABASE_HOST'] %>
+  database: <%= ENV['CC_DATABASE'] %>
+  username: <%= ENV['CC_DATABASE_USERNAME'] %>
   password: <%= ENV['CC_DATABASE_PASSWORD'] %>
