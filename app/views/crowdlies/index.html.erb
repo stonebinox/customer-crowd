@@ -1,0 +1,72 @@
+<div class="m-grid m-grid--hor m-grid--root m-page">
+    <!-- BEGIN: Header -->
+        <%= render "partials/backend/menu" %>
+    <!-- END: Header -->
+    <!-- begin::Body -->
+    <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+        <!-- BEGIN: Left Aside -->
+            <%= render "partials/backend/sidebar" %>
+        <!-- END: Left Aside -->
+        <div class="m-grid__item m-grid__item--fluid m-wrapper">
+            <!-- BEGIN: Subheader -->
+            <div class="m-subheader ">
+                <div class="d-flex align-items-center">
+                    <div class="mr-auto">
+                        <h3 class="m-subheader__title ">
+                            Welcome back, <%= current_user.name %>!
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Subheader -->
+            <div class="m-content">
+                <!--Begin::Main Portlet-->
+                <div class="m-portlet">
+                    <div class="m-portlet__body  m-portlet__body--no-padding">
+                        <div class="row m-row--no-padding m-row--col-separator-xl">
+                            <div class="col-xl-12">
+                                <!--begin:: Widgets/Stats2-1 -->
+                                <div class="m-widget1">
+                                    <div class="m-widget1__item">
+                                        <div class="row m-row--no-padding align-items-center">
+                                            <div class="col">
+                                                <table class="table table-striped">
+												  <thead class="thead" style="background: #000; color: #fff;">
+												    <tr>
+												      <th scope="col">Name</th>
+												      <th scope="col">Bio</th>
+												      <th scope="col">Actions</th>
+												    </tr>
+												  </thead>
+												  <tbody>
+												  	<% if @crowdlies %>
+													  	<% @crowdlies.each do |crowdly| %>
+														    <tr>
+														      <td><%= crowdly.name %></td>
+														      <td><%= crowdly.bio %></td>
+														      <td><%= link_to "Edit", edit_crowdly_path(crowdly.id) %> - <%= link_to "Delete", crowdly_path(crowdly.id), method: :delete %></td>
+														    </tr>
+													    <% end %>
+													<% else %>
+														<p>No record yet!</p>
+													<% end %>
+												  </tbody>
+												</table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end:: Widgets/Stats2-1 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end:: Body -->
+    <!-- begin::Footer -->
+    <%= render 'partials/frontend/footer' %>
+    <!-- end::Footer -->
+</div>
+<!-- end:: Page -->
