@@ -5,6 +5,6 @@ class Api::V1::CrowdliesController < ApplicationController
 
   	def index
   		@crowdlies = Crowdly.where(user_id: params[:id])
-  		render json: @crowdlies, callback: "callback"
+  		render json: @crowdlies
   	end
 end
