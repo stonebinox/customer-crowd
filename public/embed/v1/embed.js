@@ -23,7 +23,7 @@ app.controller("data",function($scope,$http){
                     var createdAT=row.created_at;
                     var updatedAt=row.updated_at;
                     //build ui content here. 
-                    //var content='<div>content here</div>';
+                    var content='<div><h1 style="color: #000;">'+userID+', '+name+'</h1></div>';
                     //messageBox(title,content);
                 }   
             },10000);  
