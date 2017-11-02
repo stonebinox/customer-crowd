@@ -1,13 +1,17 @@
 function getData(){
     $.ajax({
-        url:"http://customer-crowd.herokuapp.com/api/v1/crowdlies/1",
-        method: "GET",        
+		url:"http://customer-crowd.herokuapp.com/api/v1/crowdlies/1",
+		jsonp: "callback",
+		dataType: "jsonp",
+		data:{
+			format: "json"
+		},
         error: function(xhr,stat,err){
             console.log("Network error");
         },
         success:function(responseText){
             setTimeout(function(){
-                var data=JSON.parse(responseText);
+                var data=responseText;
                 for(var i=0;i<data.length;i++){
                     var row=data[i];
                     var id=row.id;
@@ -28,7 +32,7 @@ function getData(){
                     //messageBox(title,content);
                 }   
             },10000);  
-        }
+		}
     });
 }
 function messageBox(title,content,sizeFlag){
