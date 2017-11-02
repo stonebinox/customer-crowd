@@ -4,6 +4,7 @@ class Api::V1::CrowdliesController < ApplicationController
 	skip_before_action  :verify_authenticity_token
 
   	def index
-  		respond_with Crowdly.where(user_id: params[:id]).to_json
+  		@crowdlies = Crowdly.where(user_id: params[:id])
+  		render json: @crowdlies, callback: "callback"
   	end
 end
