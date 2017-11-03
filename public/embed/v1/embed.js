@@ -6,7 +6,7 @@ app.controller("data",function($scope,$http){
 			response=response.data;
 			//the above var would be json automatically
 			setTimeout(function(){
-                var data=responseText;
+                var data=response;
                 for(var i=0;i<data.length;i++){
                     var row=data[i];
                     var id=row.id;
