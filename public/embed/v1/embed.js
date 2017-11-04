@@ -1,5 +1,7 @@
+console.log("b");
 var app=angular.module("ccrowd",[]);
 app.controller("data",function($scope,$http){
+    console.log("space");
     $scope.getData=function(){
         console.log("here");
         $http.jsonp("http://customer-crowd.herokuapp.com/api/v1/crowdlies/1?callback=JSON_CALLBACK")
