@@ -5,6 +5,7 @@ class Api::V1::CrowdliesController < ApplicationController
 
   	def index
   		@crowdlies = Crowdly.where(user_id: params[:id])
-  		respond_with @crowdlies
+  		response.headers['Access-Control-Allow-Origin'] = 'application/javascript'
+  		render json: @crowdlies
   	end
 end
