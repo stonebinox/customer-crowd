@@ -1,6 +1,6 @@
 class CrowdliesController < ApplicationController
   
-  before_action :get_crowdly, only: [:show, :edit, :update, :delete]
+  before_action :get_crowdly, only: [:show, :edit, :update, :destroy]
   respond_to :html, :json
 
   def index
@@ -36,7 +36,7 @@ class CrowdliesController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @crowdly.delete
     redirect_to crowdlies_path
   end
