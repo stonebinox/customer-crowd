@@ -1,39 +1,36 @@
-console.log("b");
-var app=angular.module("ccrowd",[]);
-app.controller("data",function($scope,$http){
-    console.log("space");
-    $scope.getData=function(){
-        console.log("here");
-        $http.jsonp("http://customer-crowd.herokuapp.com/api/v1/crowdlies/1?callback=JSON_CALLBACK")
-        .then(function success(response){
-            response=response.data;
-            //the above var would be json automatically
-            setTimeout(function(){
-                var data=response;
-                for(var i=0;i<data.length;i++){
-                    var row=data[i];
-                    var id=row.id;
-                    var userID=row.user_id;
-                    var name=row.name;
-                    var image=row.image;
-                    var imageURL=image.url;
-                    var bio=row.bio;
-                    var fb=row.facebook;
-                    var twitter=row.twitter;
-                    var insta=row.instagram;
-                    var linkedin=row.linkedin;
-                    var review=row.review;
-                    var createdAT=row.created_at;
-                    var updatedAt=row.updated_at;
-                    //build ui content here. 
-                    // var content='<div><h1 style="color: #000;">'+userID+', '+name+'</h1></div>';
-                    // messageBox(title,content);
-                    console.log(name);
-                }   
-            },10000);  
-        },
-        function error(response){
-            console.log("Network error");
-        });
-    };
+function myFunction() {
+    // Get the snackbar DIV
+    var x = document.getElementById("popup");
+
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function() { x.className = x.className.replace("show", ""); }, 5000);
+}
+$.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/1', function(data) {
+            setInterval(function() {
+                        var randomNames = Math.floor(Math.random() * data.length);
+                        var row = data[randomNames];
+                        var name = row.name;
+                        var imageURL = "https://customer-crowd.herokuapp.com" + row.image.url;
+                        var bio = row.bio;
+                        var fb = row.facebook;
+                        var twitter = row.twitter;
+                        var instagram = row.instagram;
+                        var linkedin = row.linkedin;
+                        var review = row.review;
+                        myFunction();
+                        $("#popup").html(`
+                            <div id="snackbar" >
+                            <div style="width: 20%; float: left;">
+                                <img src="${imageURL}" class="img-responsive" style="border-radius: 50%; width: 100px;">
+                            </div>
+                            <div style="width: 80%; float: right;">
+                                <h4>${name}</h4>&nbsp;${fb != "" ? `<a href="${fb}"><i class="fa fa-facebook"></i></a>` : ''}${twitter != "" ? `<a href="${twitter}"><i class="fa fa-twitter"></i></a>` : ''}${instagram != "" ? `<a href="${instagram}"><i class="fa fa-instagram"></i></a>` : ''}${linkedin != "" ? `<a href="${linkedin}"><i class="fa fa-linkedin"></i></a>` : ''}<br/>
+                                <small>${bio}</small><br/><p><strong>${review}</strong></p>
+                            </div>
+                            </div>
+                        ` );
+    }, 10000);
 });
