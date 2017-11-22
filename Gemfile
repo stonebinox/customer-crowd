@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.3'
 gem 'carrierwave', '~> 1.2', '>= 1.2.1'
 gem 'active_model_serializers', '~> 0.10.6'
+gem 'fog-aws'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
