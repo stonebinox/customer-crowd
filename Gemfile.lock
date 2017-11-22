@@ -227,7 +227,7 @@ DEPENDENCIES
   carrierwave (~> 1.2, >= 1.2.1)
   coffee-rails (~> 4.2)
   devise (~> 4.3)
-  fog-aws
+  fog-aws (~> 1.4, >= 1.4.1)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
