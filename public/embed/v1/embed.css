@@ -14,7 +14,6 @@
 }
 
 #popup.show {
-    position: absolute;
     visibility: visible;
     -webkit-animation: fadein 0.5s, fadeout 0.5s 10s;
     animation: fadein 0.5s, fadeout 0.5s 10s;
