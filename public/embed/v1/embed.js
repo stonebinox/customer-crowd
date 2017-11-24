@@ -14,7 +14,7 @@ $.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/' + identifier, fun
                         var randomNames = Math.floor(Math.random() * data.length);
                         var row = data[randomNames];
                         var name = row.name;
-                        var imageURL = "https://customer-crowd.herokuapp.com" + row.image.url;
+                        var imageURL = row.image.url;
                         var bio = row.bio;
                         var fb = row.facebook;
                         var twitter = row.twitter;
@@ -24,7 +24,7 @@ $.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/' + identifier, fun
                         myFunction();
                         $("#popup").html(`
 			<div id="snackbar">
-				<div style="width: 20%; float: left;">
+                <div style="width: 20%; float: left;">
 					<img src="${imageURL}" class="img-responsive" style="border-radius: 50%; width: 100px;">
 				</div>
 				<div style="width: 80%; float: right;">
