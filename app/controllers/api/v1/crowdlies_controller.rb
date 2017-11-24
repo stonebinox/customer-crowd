@@ -13,7 +13,7 @@ class Api::V1::CrowdliesController < ApplicationController
 			private
 			
 					def set_headers
-							headers['Access-Control-Allow-Origin'] = '*'
+							headers['Access-Control-Allow-Origin'] = 'https://customer-crowd.herokuapp.com'
 							headers['Access-Control-Expose-Headers'] = 'ETag'
 							headers['Access-Control-Allow-Methods'] = 'GET'
 							headers['Access-Control-Allow-Headers'] = '*,x-requested-with,Content-Type,If-Modified-Since,If-None-Match'
