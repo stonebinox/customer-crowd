@@ -7,4 +7,5 @@ CarrierWave.configure do |config|
       :endpoint               => 'http://customercrowd.s3.amazonaws.com'
   }
   config.fog_directory  = "customercrowd"
+  config.fog_public = true
 end
