@@ -17,6 +17,19 @@
                         </h3>
                     </div>
                 </div>
+                <div class="mr-auto">
+                    <p>Kindly paste the code below right before the closing '<strong>&lt;/body&gt;</strong>' in your website's source code.</p>
+                    <div style="background: #D3D3D3; height: 200px; border-radius: 15px; padding: 25px;">
+                        <strong style="">
+                            &lt;div id="popup" style="display: block;"&gt;&lt;/div&gt;<br>
+                            &lt;script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"&gt;&lt;/script&gt;<br>
+                            &lt;link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"&gt;<br>
+                            &lt;link href="https://customer-crowd.herokuapp.com/embed/v1/embed.css" rel="stylesheet" type="text/css"&gt;<br>
+                            &lt;script&gt; var identifier = "<%= current_user.id %>"; &lt;/script&gt;<br>
+                            &lt;script type="text/javascript" src="https://customer-crowd.herokuapp.com/embed/v1/embed.js">&lt;/script&gt;<br>
+                        </strong>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
