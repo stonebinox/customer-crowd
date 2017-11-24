@@ -8,5 +8,4 @@ CarrierWave.configure do |config|
   }
   config.fog_directory  = "customercrowd"
   config.fog_public = true
-  config.s3_access_policy = :public_read
 end
