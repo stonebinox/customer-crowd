@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
  validates :name, presence: true
  validates :website, presence: true
+ validates :token, presence: true
 
  has_many :crowdlies
 
