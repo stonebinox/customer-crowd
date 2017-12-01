@@ -7,7 +7,7 @@ function myFunction() {
     x.className = "show";
 
     // After 3 seconds, remove the show class from DIV
-    setTimeout(function() { x.className = x.className.replace("show", ""); }, 5000);
+    setTimeout(function() { x.className = x.className.replace("show", ""); }, 10000);
 }
 $.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/' + identifier, function(data) {
             setInterval(function() {
