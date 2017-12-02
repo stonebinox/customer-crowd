@@ -4,6 +4,7 @@ function dismiss() {
 
     // Delete the snackbar DIV
     x.parentNode.removeChild(x);
+
 }
 
 function myFunction() {
