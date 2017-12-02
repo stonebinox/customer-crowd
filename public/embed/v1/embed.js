@@ -41,7 +41,7 @@ $.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/' + identifier, fun
                 </div>
 				<div style="width: 80%; float: right; margin-top: 8px;">
                     <h4 style="margin-top: -5px;">${name}</h4>&nbsp;${fb != "" ? `<a href="${fb}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-facebook"></i></a>` : ''}${twitter != "" ? `<a href="${twitter}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-twitter"></i></a>` : ''}${instagram != "" ? `<a href="${instagram}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-instagram"></i></a>` : ''}${linkedin != "" ? `<a href="${linkedin}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-linkedin"></i></a>` : ''}<br/>
-                    <small>${bio}</small><br/><p style="font-size: 13px !important;"><strong>${review}</strong></p><br/>
+                    <small>${bio}</small><br/><p style="font-size: 13px !important; text-align: right;"><strong>${review}</strong></p><br/>
                     <small>powered by <a href="http://customercrowd.com" target="_blank" style="color: #51bcda !important;"><strong>CustomerCrowd</strong></a></small>
 				</div>
 			</div>
