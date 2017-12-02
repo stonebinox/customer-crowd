@@ -46,5 +46,5 @@ $.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/' + identifier, fun
 				</div>
 			</div>
 		` );
-	}, 10000);
+	}, 15000);
 });
