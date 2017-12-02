@@ -1,3 +1,11 @@
+function dismiss() {
+    // Get the snackbar DIV
+    var x = document.getElementById("popup");
+
+    // Delete the snackbar DIV
+    x.parentNode.removeChild(x);
+}
+
 function myFunction() {
 
     // Get the snackbar DIV
@@ -26,11 +34,14 @@ $.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/' + identifier, fun
 			<div id="snackbar">
                 <div style="width: 20%; float: left;">
 					<img src="${imageURL}" class="img-responsive" style="border-radius: 50%; width: 100px;">
-				</div>
+                </div>
+                <div style="float: right; margin-right: 5px; margin-top: 5px;">
+                    <small><a href="#" onclick="dismiss()">dismiss</a></small>
+                </div>
 				<div style="width: 80%; float: right;">
-                    <h4>${name}</h4>&nbsp;${fb != "" ? `<a href="${fb}" target="_blank"><i class="fa fa-facebook"></i></a>` : ''}${twitter != "" ? `<a href="${twitter}" target="_blank"><i class="fa fa-twitter"></i></a>` : ''}${instagram != "" ? `<a href="${instagram}" target="_blank"><i class="fa fa-instagram"></i></a>` : ''}${linkedin != "" ? `<a href="${linkedin}" target="_blank"><i class="fa fa-linkedin"></i></a>` : ''}<br/>
+                    <h4>${name}</h4>&nbsp;${fb != "" ? `<a href="${fb}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-facebook"></i></a>` : ''}${twitter != "" ? `<a href="${twitter}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-twitter"></i></a>` : ''}${instagram != "" ? `<a href="${instagram}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-instagram"></i></a>` : ''}${linkedin != "" ? `<a href="${linkedin}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-linkedin"></i></a>` : ''}<br/>
                     <small>${bio}</small><br/><p><strong>${review}</strong></p><br/>
-                    <small>powered by <a href="http://customercrowd.com" target="_blank"><strong>CustomerCrowd</strong></a></small>
+                    <small>powered by <a href="http://customercrowd.com" target="_blank" style="color: #51bcda !important;"><strong>CustomerCrowd</strong></a></small>
 				</div>
 			</div>
 		` );
