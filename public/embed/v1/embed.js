@@ -34,7 +34,7 @@ $.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/' + identifier, fun
                         $("#popup").html(`
 			<div id="snackbar">
                 <div style="width: 20%; float: left;">
-					<img src="${imageURL}" class="img-responsive" style="border-radius: 50%; width: 50px;">
+					<img src="${imageURL}" class="img-responsive" style="border-radius: 50%; width: 70px;">
                 </div>
                 <div style="float: right; margin-right: 5px; margin-top: 5px;">
                     <small><a href="#" onclick="dismiss()">dismiss</a></small>
