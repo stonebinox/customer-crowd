@@ -20,7 +20,8 @@ function myFunction() {
 }
 $.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/' + identifier, function(data) {
             setInterval(function() {
-                        var randomNames = Math.floor(Math.random() * data.length);
+                        // var randomNames = Math.floor(Math.random() * data.length);
+                        var randomNames = data.pop();
                         var row = data[randomNames];
                         var name = row.name;
                         var imageURL = row.image.url;
@@ -37,7 +38,7 @@ $.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/' + identifier, fun
 					<img src="${imageURL}" class="img-responsive" style="border-radius: 50%; width: 70px;">
                 </div>
                 <div style="float: right; margin-right: 5px; margin-bottom: 5px;">
-                    <small><a href="#" onclick="dismiss()">dismiss</a></small>
+                    <small><a href="#" onclick="dismiss()">Dismiss</a></small>
                 </div>
 				<div style="width: 80%; float: right; margin-top: 5px;">
                     <h4 style="margin-top: -5px;">${name}</h4>&nbsp;${fb != "" ? `<a href="${fb}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-facebook"></i></a>` : ''}${twitter != "" ? `<a href="${twitter}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-twitter"></i></a>` : ''}${instagram != "" ? `<a href="${instagram}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-instagram"></i></a>` : ''}${linkedin != "" ? `<a href="${linkedin}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-linkedin"></i></a>` : ''}<br/>
