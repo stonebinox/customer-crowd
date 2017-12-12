@@ -36,7 +36,7 @@ $.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/' + identifier, fun
                 <div style="width: 20%; float: left;">
 					<img src="${imageURL}" class="img-responsive" style="border-radius: 50%; width: 70px;">
                 </div>
-                <div style="float: right; margin-right: 5px; margin-top: 5px;">
+                <div style="float: right; margin-right: 5px; margin-bottom: 5px;">
                     <small><a href="#" onclick="dismiss()">dismiss</a></small>
                 </div>
 				<div style="width: 80%; float: right; margin-top: 5px;">
