@@ -22,7 +22,7 @@ $.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/' + identifier, fun
             setInterval(function() {
                         // var randomNames = Math.floor(Math.random() * data.length);
                         var randomNames = data.pop();
-                        var row = data[randomNames];
+                        var row = data[randomNames.id];
                         var name = row.name;
                         var imageURL = row.image.url;
                         var bio = row.bio;
