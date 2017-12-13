@@ -20,9 +20,10 @@ function myFunction() {
 }
 $.get('https://customer-crowd.herokuapp.com/api/v1/crowdlies/' + identifier, function(data) {
             setInterval(function() {
-                        // var randomNames = Math.floor(Math.random() * data.length);
-                        var randomNames = data.pop();
-                        var row = data[randomNames.id];
+                        var randomNames = Math.floor(Math.random() * data.length);
+                        // var randomNames = data.pop();
+                        // console.log(randomNames.id);
+                        var row = data[randomNames];
                         var name = row.name;
                         var imageURL = row.image.url;
                         var bio = row.bio;
