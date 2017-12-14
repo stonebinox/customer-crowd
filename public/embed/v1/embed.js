@@ -41,7 +41,7 @@ function loadItem(crowdlies, pos) {
                                 <small style="font-size: 10px;">${bio}</small><br/><p style="font-size: 13px !important; text-align: left; text-align: center; margin-bottom: 0 !important;">${review}</p>
                                 <table border=0 cellpadding=0 cellspacing=10 align="center" width="100%">
                                     <tr>
-                                        <td align="center" width="90%"><small>powered by <a href="http://customercrowd.com" target="_blank" style="color: #51bcda !important;"><strong>CustomerCrowd</strong></a></small></td>
+                                        <td align="center" width="90%"><small style="margin-left:20px;">powered by <a href="http://customercrowd.com" target="_blank" style="color: #51bcda !important;"><strong>CustomerCrowd</strong></a></small></td>
                                         <td align="center" width="10%"><small class="dismiss" id="dismiss" style="display: none; float: right;"><a style="text-decoration: none; color: #0056b3;" href="#" onclick="dismiss()">Dismiss</a></small></td>
                                     </tr>
                                 </table>
