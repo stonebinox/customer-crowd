@@ -39,8 +39,14 @@ function loadItem(crowdlies, pos) {
                         <div style="">
                                 <h6 style="margin-bottom: 0 !important; margin-top: 5px;"><img src="${imageURL}" style="border-radius: 50%; width: 50px;">${name}</h6>&nbsp;${fb != "" ? `<a href="${fb}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-facebook"></i></a>` : ''}${twitter != "" ? `&nbsp;<a href="${twitter}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-twitter"></i></a>` : ''}${instagram != "" ? `&nbsp;<a href="${instagram}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-instagram"></i></a>` : ''}${linkedin != "" ? `&nbsp;<a href="${linkedin}" target="_blank" style="color: #51bcda !important;"><i class="fa fa-linkedin"></i></a>` : ''}<br/>
                                 <small style="font-size: 10px;">${bio}</small><br/><p style="font-size: 13px !important; text-align: left; text-align: center; margin-bottom: 0 !important;">${review}</p>
-                                <div class="row">
-                                    <small>powered by <a href="http://customercrowd.com" target="_blank" style="color: #51bcda !important; margin-top: -10px;"><strong>CustomerCrowd</strong></a></small><small class="dismiss" id="dismiss" style="display: none; float: right;"><a style="text-decoration: none; color: #0056b3;" href="#" onclick="dismiss()">Dismiss</a></small>
+                                <table border=0 cellpadding=0 cellspacing=10 align="center" width="100%">
+                                    <tr>
+                                        <td align="center" width="90%">powered by <a href="http://customercrowd.com" target="_blank" style="color: #51bcda !important;"><strong>CustomerCrowd</strong></a></small></td>
+                                        <td align="center" width="10%"><small class="dismiss" id="dismiss" style="display: none; float: right;"><a style="text-decoration: none; color: #0056b3;"> href="#" onclick="dismiss()">Dismiss</a></small></td>
+                                    </tr>
+                                </table>
+                                <small>
+                                
                         </div>
                 </div>
         ` );
