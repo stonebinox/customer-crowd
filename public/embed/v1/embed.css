@@ -10,18 +10,13 @@
     position: fixed;
     z-index: 1;
     right: 0%;
-    bottom: 15px;
+    bottom: 1%;
 }
 
 #popup.show {
     visibility: visible;
     -webkit-animation: fadein 0.5s, fadeout 0.5s 10s;
     animation: fadein 0.5s, fadeout 0.5s 10s;
-}
-
-.dismiss {
-    float: right;
-    margin-bottom: -10px;
 }
 
 @-webkit-keyframes fadein {
