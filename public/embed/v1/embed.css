@@ -1,6 +1,7 @@
 #popup {
     visibility: hidden;
     max-width: 450px;
+    max-height: 150px;
     background-color: #fff;
     color: #000;
     text-align: center;
@@ -16,6 +17,11 @@
     visibility: visible;
     -webkit-animation: fadein 0.5s, fadeout 0.5s 10s;
     animation: fadein 0.5s, fadeout 0.5s 10s;
+}
+
+.dismiss {
+    float: right;
+    margin-bottom: -10px;
 }
 
 @-webkit-keyframes fadein {
