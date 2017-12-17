@@ -1,2 +1,31 @@
-<h2><%= link_to 'Login', new_user_session_path %></h2>
-<h2><%= link_to 'Create Account', new_user_registration_path %></h2>
+<%= render 'partials/frontend/header' %>
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="">
+      <div class="masthead clearfix white-bg" style="width: 100% !important;">
+        <div class="inner-1">
+          <div class="row">
+            <div class="col-md-9">
+              <h3 class="masthead-brand" style="margin-left: 55%;"><img src="<%= image_url('logos/logo.png') %>" width="250px"></h3>
+            </div>
+            <div class="col-md-3">
+              <nav class="nav nav-masthead" style="right: 5%;">
+                <a class="nav-link text-black" href="<%= new_user_session_path %>">Sign In</a>
+                <a class="nav-link text-black" href="<%= new_user_registration_path %>">Sign Up</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inner text-center" style="background-color: #538ede !important;">
+        <h1 class="cover-heading text-white" style="font-size: 60px;">The crowd has spoken.</h1>
+        <p class="lead text-white">Instantly add socially verified testimonials to any page on your site.</p>
+      </div>
+      <div class="mastfoot white-bg" style="width: 100% !important; height: 40px;">
+        <div class="inner-05">
+          <p class="text-black">&copy; Copyright 2017 CustomerCrowd &nbsp;&nbsp;&nbsp;&nbsp;Contact Us: info[at]customercrowd.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
